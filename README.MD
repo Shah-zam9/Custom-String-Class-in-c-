@@ -1,39 +1,34 @@
-//In this custom string class strings requiring less than 10 characters will be stored in the fixed-sized character
-array. However, longer strings will be stored and maintained dynamically.stored in the fixed-sized array.
-<br>
-The custom string class has the following :
-<br>
-~Constructors:
+<h1>Custom String Class</h1>
 
-    •Default constructor
-    •Parameterized constructor
-    •Copy constructor Given a string object, copy its contents to the current string object. Performs a deep copy
+<p>This custom string class is designed to store and manipulate strings efficiently. Strings with less than 10 characters are stored in a fixed-sized character array. Strings longer than 10 characters are dynamically allocated and maintained.</p>
 
-~Destructor
+<h2>Features</h2>
 
-~Overloaded Operators:
-<br>
-    •Assignment operator
-    Copy the contents of a given string object or C-string to the current string object and return
-    it. 
-    •Addition operator
-    Concatenate two string objects into one and returns the concentrated string
-    •Equality operator
-    Check the equality of two string objects.
-    •Stream insertion operator
-    Print the string object to the output stream. 
-~Other functionalities:
-<br>
-    •Sub-string
-    Given a starting position, return a sub-string of the specified length. If no sub-string exists,
-    return an empty string.
-    •Find
-    Return the starting index of the specified sub-string in the string. If the sub-string does not
-    exist, returns -1.
-    •Length
-    Return the length of the string.
-    •Reverse
-    Reverse the specified string.
-    •To Uppercase
-    Convert the specified string to uppercase.
+<h3>Constructors</h3>
+<ul>
+    <li><strong>Default Constructor:</strong> Initializes an empty string.</li>
+    <li><strong>Parameterized Constructor:</strong> Initializes a string with a given C-string.</li>
+    <li><strong>Copy Constructor:</strong> Creates a new string object by performing a deep copy of another string.</li>
+</ul>
 
+<h3>Destructor</h3>
+<ul>
+    <li><strong>Destructor:</strong> Frees allocated memory for dynamically stored strings.</li>
+</ul>
+
+<h3>Overloaded Operators</h3>
+<ul>
+    <li><strong>Assignment Operator (=):</strong> Copies the contents of a given string object or C-string into the current string object.</li>
+    <li><strong>Addition Operator (+):</strong> Concatenates two string objects and returns the resulting string.</li>
+    <li><strong>Equality Operator (==):</strong> Checks if two string objects are equal.</li>
+    <li><strong>Stream Insertion Operator (&lt;&lt;):</strong> Prints the string object to the output stream.</li>
+</ul>
+
+<h3>Other Functionalities</h3>
+<ul>
+    <li><strong>Substring (substr):</strong> Given a starting position and length, returns a substring. If the substring doesn't exist, returns an empty string.</li>
+    <li><strong>Find (find):</strong> Returns the starting index of a specified substring. If the substring doesn't exist, returns <code>-1</code>.</li>
+    <li><strong>Length (length):</strong> Returns the length of the string.</li>
+    <li><strong>Reverse (reverse):</strong> Reverses the string in place.</li>
+    <li><strong>To Uppercase (toUppercase):</strong> Converts the string to uppercase.</li>
+</ul>
