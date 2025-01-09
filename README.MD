@@ -1,7 +1,10 @@
 //In this custom string class strings requiring less than 10 characters will be stored in the fixed-sized character
 array. However, longer strings will be stored and maintained dynamically.stored in the fixed-sized array.
+<br>
 The custom string class has the following :
+<br>
 ~Constructors:
+
     •Default constructor
     •Parameterized constructor
     •Copy constructor Given a string object, copy its contents to the current string object. Performs a deep copy
