@@ -1,0 +1,2 @@
+//In this custom string class strings requiring less than 10 characters must be stored in the fixed-sized character
+array. However, longer strings will be stored and maintained dynamically.stored in the fixed-sized array.
