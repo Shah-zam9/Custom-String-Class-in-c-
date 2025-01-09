@@ -10,14 +10,14 @@ int Stringlength(const char *s)
     return length;
 }
 
-customString::string::string()
+customString::string::string()  //Default constructor
 {
     size = 0;
     pstr = nullptr;
     str[0] = '\0';
 }
 
-customString::string::string(const char *s)
+customString::string::string(const char *s)  //Parameterized constructor
 {
     size = Stringlength(s);
 
@@ -41,7 +41,7 @@ customString::string::string(const char *s)
     }
 }
 
-customString::string::string(const string &other)
+customString::string::string(const string &other) //Copy constructor
 {
     size = other.size;
     if (size < 10)
@@ -64,7 +64,7 @@ customString::string::string(const string &other)
     }
 }
 
-customString::string::~string()
+customString::string::~string()  //Destructor
 {
     if (pstr)
     {
@@ -73,7 +73,7 @@ customString::string::~string()
     }
 }
 
-customString::string customString::string::operator=(const char *s)
+customString::string customString::string::operator=(const char *s) //Copy operator
 {
     if (*this == s)
     {
@@ -104,7 +104,7 @@ customString::string customString::string::operator=(const char *s)
     return *this;
 }
 
-customString::string customString::string::operator=(const string &other)
+customString::string customString::string::operator=(const string &other)  //Assignement operator
 {
     if (this == &other)
     {
@@ -138,7 +138,7 @@ customString::string customString::string::operator=(const string &other)
     return *this;
 }
 
-customString::string customString::string::operator+(const string &other)
+customString::string customString::string::operator+(const string &other)  //Addition operator for string concentration
 {
     int new_size = size + other.size; 
 
@@ -180,7 +180,7 @@ customString::string customString::string::operator+(const string &other)
     }
 }
 
-bool customString::string::operator==(const string &other) const
+bool customString::string::operator==(const string &other) const  //Equality operator
 {
     if (size != other.size)
     {
@@ -211,7 +211,7 @@ bool customString::string::operator==(const string &other) const
     return true;
 }
 
-customString::string customString::string::substr(size_t start, size_t length)
+customString::string customString::string::substr(size_t start, size_t length)  //Substring functionality
 {
     if (start >= size || (start + length) > size)
     {
@@ -238,7 +238,7 @@ customString::string customString::string::substr(size_t start, size_t length)
     return result;
 }
 
-int customString::string::find(const char *substr) const
+int customString::string::find(const char *substr) const  //Return starting index of substring
 {
     if (!substr || !*substr)
     {
@@ -289,12 +289,12 @@ int customString::string::find(const char *substr) const
     return -1; 
 }
 
-size_t customString::string::length() const
+size_t customString::string::length() const  //Calculate the length of a string
 {
     return size;
 }
 
-void customString::string::reverse()
+void customString::string::reverse()  //Reverse a string
 {
     if (size <= 1)
     {
@@ -319,7 +319,7 @@ void customString::string::reverse()
     }
 }
 
-void customString::string::toUppercase()
+void customString::string::toUppercase()  //Convert a string to uppercase
 {
     if (size < 10)
     {
@@ -343,7 +343,7 @@ void customString::string::toUppercase()
     }
 }
 
-std::ostream &operator<<(std::ostream &out, customString::string &other)
+std::ostream &operator<<(std::ostream &out, customString::string &other)  //Stream insertion operator
 {
     if (other.size < 10)
     {
@@ -356,7 +356,7 @@ std::ostream &operator<<(std::ostream &out, customString::string &other)
     return out;
 }
 
-//----------------------------------- TESTING - DO NOT EDIT ------------------------------
+//----------------------------------- TESTING -------------------------------
 
 #include <sstream>
 #include <cstring>
