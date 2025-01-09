@@ -12,6 +12,7 @@ The custom string class has the following :
 ~Destructor
 
 ~Overloaded Operators:
+<br>
     •Assignment operator
     Copy the contents of a given string object or C-string to the current string object and return
     it. 
@@ -21,7 +22,8 @@ The custom string class has the following :
     Check the equality of two string objects.
     •Stream insertion operator
     Print the string object to the output stream. 
-~Other functionalities
+~Other functionalities:
+<br>
     •Sub-string
     Given a starting position, return a sub-string of the specified length. If no sub-string exists,
     return an empty string.
